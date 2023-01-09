@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1km29jt-MuiContainer-root"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
