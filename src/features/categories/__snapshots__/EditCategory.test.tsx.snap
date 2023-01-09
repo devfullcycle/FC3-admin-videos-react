@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditCategory should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1ps6pg7-MuiPaper-root"
+    >
+      <div
+        class="MuiBox-root css-19midj6"
+      >
+        <div
+          class="MuiBox-root css-1qm1lh"
+        >
+          <h4
+            class="MuiTypography-root MuiTypography-h4 css-5lbw0b-MuiTypography-root"
+          >
+            Edit Category
+          </h4>
+        </div>
+      </div>
+      <div
+        class="MuiBox-root css-19midj6"
+      >
+        <form>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-disabled Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for=":r0:"
+                    id=":r0:-label"
+                  >
+                    Name
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input Mui-disabled css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                      data-testid="name"
+                      disabled=""
+                      id=":r0:"
+                      name="name"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-1ftyaf0"
+                      >
+                        <span>
+                          Name *
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-disabled Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for=":r1:"
+                    id=":r1:-label"
+                  >
+                    Description
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input Mui-disabled css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                      data-testid="description"
+                      disabled=""
+                      id=":r1:"
+                      name="description"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-1ftyaf0"
+                      >
+                        <span>
+                          Description *
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+              >
+                <label
+                  class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                >
+                  <span
+                    class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                  >
+                    <span
+                      aria-disabled="true"
+                      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-disabled Mui-disabled PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-disabled Mui-disabled css-priqlz-MuiButtonBase-root-MuiSwitch-switchBase"
+                      data-testid="is_active"
+                      tabindex="-1"
+                    >
+                      <input
+                        aria-label="controlled"
+                        class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                        disabled=""
+                        name="is_active"
+                        type="checkbox"
+                      />
+                      <span
+                        class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                      />
+                    </span>
+                    <span
+                      class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled css-ahj2mt-MuiTypography-root"
+                  >
+                    Active
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiBox-root css-10egq61"
+              >
+                <a
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+                  href="/categories"
+                  tabindex="0"
+                >
+                  Back
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </a>
+                <button
+                  class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium css-zcbmsk-MuiButtonBase-root-MuiButton-root"
+                  disabled=""
+                  tabindex="-1"
+                  type="submit"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
