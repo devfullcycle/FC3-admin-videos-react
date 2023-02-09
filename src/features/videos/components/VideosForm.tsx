@@ -9,11 +9,12 @@ import {
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import { AutoCompleteFields } from "../../../components/AutoCompleteFields";
+import { InputFile } from "../../../components/InputFile";
 import { RatingsList } from "../../../components/RatingsList";
 import { CastMember } from "../../../types/CastMembers";
 import { Category } from "../../../types/Category";
 import { Genre } from "../../../types/Genres";
-import { Video } from "../../../types/Videos";
+import { FileObject, Video } from "../../../types/Videos";
 
 type Props = {
   video: Video;
@@ -24,6 +25,8 @@ type Props = {
   isLoading?: boolean;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleAddFile: ({ name, file }: FileObject) => void;
+  handleRemoveFile: (name: string) => void;
 };
 
 export function VideosForm({
@@ -35,7 +38,41 @@ export function VideosForm({
   isLoading = false,
   handleSubmit,
   handleChange,
+  handleAddFile,
+  handleRemoveFile,
 }: Props) {
+  const handleAddThumbnail = (file: File) => {
+    handleAddFile({ name: "thumb_file", file });
+  };
+
+  const handleRemoveThumbnail = () => {
+    handleRemoveFile("thumb_file");
+  };
+
+  const handleAddBanner = (file: File) => {
+    handleAddFile({ name: "banner_file", file });
+  };
+
+  const handleAddTrailer = (file: File) => {
+    handleAddFile({ name: "trailer_file", file });
+  };
+
+  const handleAddVideo = (file: File) => {
+    handleAddFile({ name: "video_file", file });
+  };
+
+  const handleRemoveBanner = () => {
+    handleRemoveFile("banner_file");
+  };
+
+  const handleRemoveTrailer = () => {
+    handleRemoveFile("trailer_file");
+  };
+
+  const handleRemoveVideo = () => {
+    handleRemoveFile("video_file");
+  };
+
   return (
     <Box p={2}>
       <form onSubmit={handleSubmit}>
@@ -112,18 +149,6 @@ export function VideosForm({
               >
                 <Grid item xs={5}>
                   <AutoCompleteFields
-                    name="categories"
-                    label="Categories"
-                    isLoading={isLoading}
-                    isDisabled={false}
-                    values={video.categories}
-                    options={categories}
-                    handleChange={handleChange}
-                  />
-                </Grid>
-
-                <Grid item xs={5}>
-                  <AutoCompleteFields
                     name="genres"
                     label="Genres"
                     isLoading={isLoading}
@@ -133,12 +158,26 @@ export function VideosForm({
                     handleChange={handleChange}
                   />
                 </Grid>
+
+                <Grid item xs={5}>
+                  <AutoCompleteFields
+                    name="categories"
+                    label="Categories"
+                    isLoading={isLoading}
+                    isDisabled={false}
+                    values={video.categories}
+                    options={categories}
+                    handleChange={handleChange}
+                  />
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
           <Grid item xs={12} md={6} sx={{ "& .MuiTextField-root": { my: 2 } }}>
-            <FormControl>
-              <FormLabel component="legend">Rating</FormLabel>
+            <FormControl fullWidth>
+              <Box mt={2} mb={2}>
+                <FormLabel component="legend">Rating</FormLabel>
+              </Box>
               <RadioGroup
                 row
                 name="rating"
@@ -147,6 +186,32 @@ export function VideosForm({
               >
                 <RatingsList isDisabled={isDisabled} />
               </RadioGroup>
+            </FormControl>
+
+            <FormControl fullWidth>
+              <InputFile
+                onAdd={handleAddThumbnail}
+                onRemove={handleRemoveThumbnail}
+                placeholder="Thumbnail"
+              />
+              <InputFile
+                onAdd={handleAddBanner}
+                onRemove={handleRemoveBanner}
+                placeholder="Banner"
+              />
+            </FormControl>
+
+            <FormControl fullWidth>
+              <InputFile
+                onAdd={handleAddVideo}
+                onRemove={handleRemoveVideo}
+                placeholder="Video"
+              />
+              <InputFile
+                onAdd={handleAddTrailer}
+                onRemove={handleRemoveTrailer}
+                placeholder="Trailer"
+              />
             </FormControl>
           </Grid>
         </Grid>

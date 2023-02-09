@@ -2,27 +2,31 @@ import { Box, Paper, Typography } from "@mui/material";
 import { useSnackbar } from "notistack";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Video } from "../../types/Videos";
+import { useUniqueCategories } from "../../hooks/useUniqueCategories";
+import { FileObject, Video } from "../../types/Videos";
 import { VideosForm } from "./components/VideosForm";
 import { mapVideoToForm } from "./util";
 import {
-  useGetVideoQuery,
   initialState,
-  useUpdateVideoMutation,
-  useGetAllCategoriesQuery,
-  useGetAllGenresQuery,
   useGetAllCastMembersQuery,
+  useGetAllGenresQuery,
+  useGetVideoQuery,
+  useUpdateVideoMutation,
 } from "./VideoSlice";
 
 export function VideosEdit() {
   const id = useParams<{ id: string }>().id as string;
   const { enqueueSnackbar } = useSnackbar();
-  const { data: video, isFetching } = useGetVideoQuery({ id });
-  const [videoState, setVideoState] = useState<Video>(initialState);
-  const [updateVideo, status] = useUpdateVideoMutation();
-  const { data: categories } = useGetAllCategoriesQuery();
   const { data: genres } = useGetAllGenresQuery();
   const { data: castMembers } = useGetAllCastMembersQuery();
+  const { data: video, isFetching } = useGetVideoQuery({ id });
+  const [updateVideo, status] = useUpdateVideoMutation();
+  const [videoState, setVideoState] = useState<Video>(initialState);
+  const [selectedFiles, setSelectedFiles] = useState<FileObject[]>([]);
+  const [categories, setCategories] = useUniqueCategories(
+    videoState,
+    setVideoState
+  );
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
@@ -34,11 +38,20 @@ export function VideosEdit() {
     await updateVideo(mapVideoToForm(videoState));
   }
 
+  function handleAddFile({ name, file }: FileObject) {
+    setSelectedFiles([...selectedFiles, { name, file }]);
+  }
+
+  function handleRemoveFile(name: string) {
+    setSelectedFiles(selectedFiles.filter((file) => file.name !== name));
+  }
+
   useEffect(() => {
     if (video) {
       setVideoState(video.data);
+      setCategories(video.data.categories || []);
     }
-  }, [video]);
+  }, [video, setCategories]);
 
   useEffect(() => {
     if (status.isSuccess) {
@@ -61,13 +74,15 @@ export function VideosEdit() {
 
         <VideosForm
           video={videoState}
+          genres={genres?.data}
           isLoading={isFetching}
           isDisabled={isFetching}
+          categories={categories}
+          castMembers={castMembers?.data}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
-          categories={categories?.data}
-          genres={genres?.data}
-          castMembers={castMembers?.data}
+          handleAddFile={handleAddFile}
+          handleRemoveFile={handleRemoveFile}
         />
       </Paper>
     </Box>

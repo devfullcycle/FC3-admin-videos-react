@@ -63,7 +63,6 @@ function updateVideo(video: VideoPayload) {
   };
 }
 function createVideo(video: VideoPayload) {
-  console.log(video);
   return {
     url: endpointUrl,
     method: "POST",
@@ -85,7 +84,7 @@ function getAllCastMembers() {
 
 export const videosSlice = apiSlice.injectEndpoints({
   endpoints: ({ query, mutation }) => ({
-    createVideo: mutation<Results, VideoPayload>({
+    createVideo: mutation<Result, VideoPayload>({
       query: createVideo,
       invalidatesTags: ["Videos"],
     }),
