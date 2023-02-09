@@ -59,9 +59,7 @@ export const AutoCompleteFields = ({
       value={values}
       options={options || []}
       loading={isLoading}
-      onChange={(event, newValue) => {
-        handleOnChange(event, newValue);
-      }}
+      onChange={handleOnChange}
       renderInput={renderInput}
       data-testid={`${name}-search`}
       renderOption={renderOptions}

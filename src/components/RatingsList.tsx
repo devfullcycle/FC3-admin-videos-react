@@ -1,4 +1,9 @@
-import { FormControlLabel, FormControlLabelProps, Radio } from "@mui/material";
+import {
+  Box,
+  FormControlLabel,
+  FormControlLabelProps,
+  Radio,
+} from "@mui/material";
 import { Rating } from "./Rating";
 
 const ratings: FormControlLabelProps[] = [
@@ -42,7 +47,7 @@ const ratings: FormControlLabelProps[] = [
 
 export function RatingsList({ isDisabled }: { isDisabled?: boolean }) {
   return (
-    <>
+    <Box display={"flex"} justifyContent="space-between" width="100%">
       {ratings.map((rating, index) => (
         <FormControlLabel
           key={index}
@@ -51,12 +56,9 @@ export function RatingsList({ isDisabled }: { isDisabled?: boolean }) {
           label={rating.label}
           labelPlacement={rating.labelPlacement}
           disabled={isDisabled}
-          sx={{
-            ...(index === 0 && { ml: 0 }),
-            ...(index === ratings.length - 1 && { mr: 0 }),
-          }}
+          sx={{ m: 0 }}
         />
       ))}
-    </>
+    </Box>
   );
 }
