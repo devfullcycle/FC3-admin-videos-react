@@ -28,7 +28,6 @@ export const CategoryEdit = () => {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setIsdisabled(true);
     await updateCategory(categoryState);
   }
 
