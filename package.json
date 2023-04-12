@@ -58,5 +58,6 @@
   },
   "devDependencies": {
     "msw": "^0.47.3"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
