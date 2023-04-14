@@ -12,12 +12,15 @@ import { Link } from "react-router-dom";
 import { Box } from "@mui/system";
 import { Genre } from "../../../types/Genres";
 import { Category } from "../../../types/Category";
+import { CastMember } from "../../../types/CastMembers";
 
 type Props = {
   data: Results | undefined;
   perPage: number;
   isFetching: boolean;
   rowsPerPage?: number[];
+  categories: Category[];
+  genres: Genre[];
   handleOnPageChange: (page: number) => void;
   handleFilterChange: (filterModel: GridFilterModel) => void;
   handleOnPageSizeChange: (perPage: number) => void;
@@ -29,11 +32,16 @@ export function VideosTable({
   perPage,
   isFetching,
   rowsPerPage,
+  genres,
+  categories,
   handleOnPageChange,
   handleFilterChange,
   handleOnPageSizeChange,
   handleDelete,
 }: Props) {
+  const categoriesById = new Map(categories.map(i => [i.id, i]));
+  const genresById = new Map(genres.map(i => [i.id, i]));
+
   const componentProps = {
     toolbar: {
       showQuickFilter: true,
@@ -93,7 +101,7 @@ export function VideosTable({
               fontSize: "0.6rem",
               marginRight: 1,
             }}
-            label={genre.name}
+            label={genresById.get(genre.id)?.name}
           />
         ))}
 
@@ -126,12 +134,12 @@ export function VideosTable({
               fontSize: "0.6rem",
               marginRight: 1,
             }}
-            label={category.name}
+            label={categoriesById.get(category.id)?.name}
           />
         ))}
         {remainingCategories > 0 && (
           <Tooltip
-            title={categories.map((category) => category.name).join(", ")}
+            title={categories.map((category) => categoriesById.get(category.id)?.name).join(", ")}
           >
             <Chip
               sx={{
