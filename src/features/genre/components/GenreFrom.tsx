@@ -22,6 +22,7 @@ export function GenreForm({
   handleSubmit,
   handleChange,
 }: Props) {
+  const categoriesById = new Map(categories?.map(i => [i.id, i]));
   return (
     <Box p={2}>
       <form onSubmit={handleSubmit}>
@@ -49,7 +50,9 @@ export function GenreForm({
               isOptionEqualToValue={(option, value) => option.id === value.id}
               value={genre.categories}
               disabled={isDisabled || !categories}
-              getOptionLabel={(option) => option.name}
+              getOptionLabel={(option) => {
+                return categoriesById.get(option.id)?.name || ''
+              }}
               renderOption={(props, option) => (
                 <li {...props} key={option.id}>
                   {option.name}

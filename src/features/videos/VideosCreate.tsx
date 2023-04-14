@@ -21,7 +21,7 @@ export const VideosCreate = () => {
   const { data: castMembers } = useGetAllCastMembersQuery();
   const [createVideo, status] = useCreateVideoMutation();
   const [videoState, setVideoState] = useState<Video>(initialState);
-  const [caregories] = useUniqueCategories(videoState, setVideoState);
+  const [availableCategories] = useUniqueCategories(videoState, setVideoState);
   const [selectedFiles, setSelectedFiles] = useState<FileObject[]>([]);
   const dispatch = useAppDispatch();
 
@@ -77,7 +77,7 @@ export const VideosCreate = () => {
 
         <VideosForm
           video={videoState}
-          categories={caregories}
+          categories={availableCategories}
           genres={genres?.data}
           isLoading={status.isLoading}
           isDisabled={status.isLoading}

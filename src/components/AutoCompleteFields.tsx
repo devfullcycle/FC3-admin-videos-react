@@ -26,6 +26,8 @@ export const AutoCompleteFields = ({
   isDisabled,
   handleChange,
 }: Props) => {
+  const valuesById = new Map(options?.map(i => [i.id, i]));
+
   const renderOptions = (
     props: React.HTMLAttributes<HTMLLIElement>,
     option: Category | Genre | CastMember
@@ -65,7 +67,9 @@ export const AutoCompleteFields = ({
       renderOption={renderOptions}
       isOptionEqualToValue={isEqualId}
       disabled={isDisabled || !options}
-      getOptionLabel={(option) => option.name}
+      getOptionLabel={(option) => {
+        return valuesById.get(option.id)?.name || ''
+      }}
     />
   );
 };

@@ -4,7 +4,7 @@ import { useSnackbar } from "notistack";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { VideosTable } from "./components/VideosTable";
-import { useDeleteVideoMutation, useGetVideosQuery } from "./VideoSlice";
+import { useDeleteVideoMutation, useGetAllCategoriesQuery, useGetAllGenresQuery, useGetVideosQuery } from "./VideoSlice";
 
 export const VideosList = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -16,6 +16,8 @@ export const VideosList = () => {
   });
 
   const { data, isFetching, error } = useGetVideosQuery(options);
+  const { data: genres } = useGetAllGenresQuery();
+  const { data: categories } = useGetAllCategoriesQuery();
   const [deleteVideo, { error: deleteError, isSuccess: deleteSuccess }] =
     useDeleteVideoMutation();
 
@@ -67,6 +69,8 @@ export const VideosList = () => {
       </Box>
       <VideosTable
         data={data}
+        categories={categories?.data || []}
+        genres={genres?.data || []}
         isFetching={isFetching}
         perPage={options.perPage}
         rowsPerPage={options.rowsPerPage}
