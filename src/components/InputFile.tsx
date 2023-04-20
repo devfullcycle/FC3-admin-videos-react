@@ -7,18 +7,20 @@ interface Props {
   onAdd: (files: File) => void;
   onRemove: (file: File) => void;
   placeholder?: string;
+  "data-testid"?: string;
 }
 
 export const InputFile: React.FC<Props> = ({
   onAdd,
   onRemove,
   placeholder,
+  "data-testid": dataTestId = "input-file",
 }: Props) => {
   const [selectedFiles, setSelectedFiles] = useState<File>();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.item(0);
+    const file = event.target.files ? event.target.files[0] : undefined;
     if (!file) return;
     setSelectedFiles(file);
     onAdd(file);
@@ -44,11 +46,11 @@ export const InputFile: React.FC<Props> = ({
         InputProps={{
           readOnly: true,
           endAdornment: selectedFiles ? (
-            <IconButton onClick={handleClear}>
+            <IconButton data-testid="remove" onClick={handleClear}>
               <DeleteIcon />
             </IconButton>
           ) : (
-            <IconButton onClick={handleFileInput}>
+            <IconButton data-testid="select-file" onClick={handleFileInput}>
               <FileIcon />
             </IconButton>
           ),
@@ -57,7 +59,7 @@ export const InputFile: React.FC<Props> = ({
       <input
         accept="*"
         type="file"
-        id="inputFile"
+        data-testid={dataTestId}
         ref={fileInputRef}
         multiple={false}
         onChange={handleChange}

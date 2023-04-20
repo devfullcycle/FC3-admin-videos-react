@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-tmfjyz"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-jb1ygz-MuiTypography-root"
+    >
+      L
+    </p>
+  </div>
+</DocumentFragment>
+`;

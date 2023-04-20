@@ -3,10 +3,214 @@
 exports[`Layout should render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="MuiBox-root css-0"
+    class="MuiBox-root css-k008qs"
   >
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1z0i2uj-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        class="MuiBox-root css-0"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        >
+          <button
+            aria-label="menu"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeLarge css-1w6dmmw-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="MenuIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <div
+            class="MuiBox-root css-i9gxme"
+          />
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-w6mvf4-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="Brightness7Icon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit css-wewvx6-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Logout
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <nav
+      class="MuiBox-root css-1o5pq7n"
+    >
+      <div
+        class="MuiDrawer-root MuiDrawer-docked css-1nff018-MuiDrawer-docked"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-y8zhcg-MuiPaper-root-MuiDrawer-paper"
+        >
+          <div>
+            <div
+              class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+            >
+              <div
+                class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-8u39c-MuiTypography-root"
+              >
+                Codeflix
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-rr7dug-MuiDivider-root"
+            />
+            <ul
+              class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+            >
+              <a
+                href="/"
+                style="text-decoration: none;"
+              >
+                <li
+                  class="MuiListItem-root MuiListItem-gutters css-6rhc8g-MuiListItem-root"
+                >
+                  <div
+                    class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters css-squjnr-MuiButtonBase-root-MuiListItemButton-root"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+                      >
+                        Categories
+                      </span>
+                    </div>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </div>
+                </li>
+              </a>
+              <a
+                href="/cast-members"
+                style="text-decoration: none;"
+              >
+                <li
+                  class="MuiListItem-root MuiListItem-gutters css-6rhc8g-MuiListItem-root"
+                >
+                  <div
+                    class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters css-squjnr-MuiButtonBase-root-MuiListItemButton-root"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+                      >
+                        Cast Members
+                      </span>
+                    </div>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </div>
+                </li>
+              </a>
+              <a
+                href="/genres"
+                style="text-decoration: none;"
+              >
+                <li
+                  class="MuiListItem-root MuiListItem-gutters css-6rhc8g-MuiListItem-root"
+                >
+                  <div
+                    class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters css-squjnr-MuiButtonBase-root-MuiListItemButton-root"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+                      >
+                        Genres
+                      </span>
+                    </div>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </div>
+                </li>
+              </a>
+              <a
+                href="/videos"
+                style="text-decoration: none;"
+              >
+                <li
+                  class="MuiListItem-root MuiListItem-gutters css-6rhc8g-MuiListItem-root"
+                >
+                  <div
+                    class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters css-squjnr-MuiButtonBase-root-MuiListItemButton-root"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+                      >
+                        Videos
+                      </span>
+                    </div>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </div>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
     <div
-      class="MuiContainer-root MuiContainer-maxWidthLg css-1km29jt-MuiContainer-root"
+      class="MuiContainer-root MuiContainer-maxWidthLg css-eqqd0q-MuiContainer-root"
     >
       <div>
         Test
