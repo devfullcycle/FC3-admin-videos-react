@@ -10,8 +10,9 @@ import { castMembersApiSlice } from "../features/cast/castMembersSlice";
 import { categoriesApiSlice } from "../features/categories/categorySlice";
 import { genreSlice } from "../features/genre/genreSlice";
 import { videosSlice } from "../features/videos/VideoSlice";
-// import { uploadQueue } from "../middleware/uploadQueue";
 import { uploadReducer } from "../features/uploads/UploadSlice";
+import { authSlice } from "../features/auth/authSlice";
+import { uploadQueue } from "../middleware/uploadQueue";
 
 const rootReducer = combineReducers({
   [apiSlice.reducerPath]: apiSlice.reducer,
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   [castMembersApiSlice.reducerPath]: apiSlice.reducer,
   [videosSlice.reducerPath]: apiSlice.reducer,
   [genreSlice.reducerPath]: apiSlice.reducer,
+  auth: authSlice.reducer,
   uploadSlice: uploadReducer,
 });
 
@@ -28,9 +30,12 @@ export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
     preloadedState,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
-        serializableCheck: false,
+        serializableCheck: {
+          ignoredActions: ["uploads/addUpload, uploads/updateUpload"],
+          ignoredPaths: ["uploadSlice.file"],
+        },
       })
-        // .prepend(uploadQueue.middleware)
+        .prepend(uploadQueue.middleware)
         .concat(apiSlice.middleware),
   });
 };
