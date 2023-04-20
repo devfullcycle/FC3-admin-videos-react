@@ -16,7 +16,11 @@ export const updateVideo = createAsyncThunk(
       const response = await uploadService(params);
       return response;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      if (error instanceof Error) {
+        return thunkAPI.rejectWithValue({ message: error.message });
+      }
+      // You can provide a generic error message here if the error is not an instance of Error
+      return thunkAPI.rejectWithValue({ message: "An unknown error occurred" });
     }
   }
 );

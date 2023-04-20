@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadItem should render UploadItem 1`] = `
+<DocumentFragment>
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+  >
+    <div
+      class="MuiBox-root css-z7mtfw"
+    >
+      <div
+        class="MuiBox-root css-j0ozid"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="ArticleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+          />
+        </svg>
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1y53svw-MuiTypography-root"
+        >
+          test
+        </p>
+      </div>
+      <span
+        aria-valuenow="0"
+        class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorSecondary css-1bx0sm6-MuiCircularProgress-root"
+        role="progressbar"
+        style="width: 20px; height: 20px; transform: rotate(-90deg);"
+      >
+        <svg
+          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-oxts8u-MuiCircularProgress-circle"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="20.2"
+            stroke-width="3.6"
+            style="stroke-dasharray: 126.920; stroke-dashoffset: 126.920px;"
+          />
+        </svg>
+      </span>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`UploadItem should render failed UploadItem 1`] = `
+<DocumentFragment>
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+  >
+    <div
+      class="MuiBox-root css-z7mtfw"
+    >
+      <div
+        class="MuiBox-root css-j0ozid"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="ArticleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+          />
+        </svg>
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1y53svw-MuiTypography-root"
+        >
+          test
+        </p>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-colorError MuiSvgIcon-fontSizeMedium css-1wxstni-MuiSvgIcon-root"
+        data-testid="ErrorOutlineIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+      </svg>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`UploadItem should render uploading UploadItem 1`] = `
+<DocumentFragment>
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+  >
+    <div
+      class="MuiBox-root css-z7mtfw"
+    >
+      <div
+        class="MuiBox-root css-j0ozid"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="ArticleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+          />
+        </svg>
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1y53svw-MuiTypography-root"
+        >
+          test
+        </p>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-colorSuccess MuiSvgIcon-fontSizeMedium css-4b67si-MuiSvgIcon-root"
+        data-testid="CheckCircleOutlineIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M16.59 7.58 10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+      </svg>
+    </div>
+  </li>
+</DocumentFragment>
+`;
